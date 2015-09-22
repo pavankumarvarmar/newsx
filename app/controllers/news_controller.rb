@@ -1,4 +1,4 @@
-class NewsController < ApplicationController
+	class NewsController < ApplicationController
 require 'nokogiri'
 require 'open-uri'
 
@@ -67,8 +67,14 @@ def index
 	    	@news6 <<  [link.text.strip,'http://timesofindia.indiatimes.com/'+link['href']]
 	end
 	#@news6=@news6.take(10)
+
+
+	sensex = Nokogiri::HTML(open('http://www.bseindia.com/'))
+	@sensex=[]
 	
-	
-	
+	#@sensex =sensex.css('.newsensexvalue').text
+	#sensex.css('.sensextext div').each do |link|
+		@sensex << sensex.css('#IndCurr1').first.text
+	#end
 end
 end
