@@ -68,13 +68,33 @@ def index
 	end
 	#@news6=@news6.take(10)
 
-
-	sensex = Nokogiri::HTML(open('http://www.bseindia.com/'))
-	@sensex=[]
+	doc7 = Nokogiri::HTML(open('http://www.andhrajyothy.com'))
+	@news7=[]
 	
-	#@sensex =sensex.css('.newsensexvalue').text
-	#sensex.css('.sensextext div').each do |link|
-		@sensex << sensex.css('#IndCurr1').first.text
-	#end
+	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
+	doc7.css('.thaja-li-height a').each do |link|
+	    	@news7<<  [link.text.strip,'http://www.andhrajyothy.com/'+link['href']]
+	end
+	#@news6=@news6.take(10)
+
+	doc8 = Nokogiri::HTML(open('http://www.espncricinfo.com/'))
+	@news8=[]
+	
+	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
+	doc8.css('div#most-viewed-content a').each do |link|
+	    	@news8<<  [link.text.strip,'http://www.espncricinfo.com/'+link['href']]
+	end
+	#@news6=@news6.take(10)
+
+	doc9 = Nokogiri::HTML(open('http://sports.ndtv.com/'))
+	@news9=[]
+	
+	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
+	doc9.css('.cricket h3 a').each do |link|
+	    	@news9<<  [link.text.strip,'http://sports.ndtv.com/'+link['href']]
+	end
+	#@news6=@news6.take(10)
+
+	
 end
 end
