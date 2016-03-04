@@ -8,18 +8,6 @@
 
 <table data-row-style="rowStyle" class="table table-striped table-bordered table-condensed">
 <tr>
-<td>	
-<h4> EConomic Times </h4>	
-<table class="table table-striped table-bordered table-condensed">
-<tbody>
-   
-   <% @news.each do |item|%>
-      <tr><h4><a href="<%= item[1] %>" target="_blank"><%= item[0] %></h4></tr>      
-   <% end %>
-   
-</tbody>
-</table>
-</td>
 <td>  
 <h4> Times of India </h4> 
 <table style="border:1px;">
@@ -32,6 +20,22 @@
 </tbody>
 </table>
 </td>
+
+<td>	
+<h4> EConomic Times </h4>	
+<table class="table table-striped table-bordered table-condensed">
+<tbody>
+   
+   <% @news.each do |item|%>
+      <tr><h4><a href="<%= item[1] %>" target="_blank"><%= item[0] %></h4></tr>      
+   <% end %>
+   
+</tbody>
+</table>
+
+
+</td>
+
 
 <td>
 <h4> ET-Enterprenuer </h4>	
@@ -70,6 +74,18 @@
 <tbody>
    
    <% @news4.each do |item|%>
+      <tr><h4><a href="<%= item[1] %>" target="_blank"><%= item[0] %></h4></tr>      
+   <% end %>
+   
+</tbody>
+</table>
+</td>
+<td>  
+<h4> Andhrajyothy </h4> 
+<table style="border:1px;">
+<tbody>
+   
+   <% @news7.each do |item|%>
       <tr><h4><a href="<%= item[1] %>" target="_blank"><%= item[0] %></h4></tr>      
    <% end %>
    
