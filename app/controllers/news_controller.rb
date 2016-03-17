@@ -94,7 +94,17 @@ def index
 	    	@news9<<  [link.text.strip,'http://sports.ndtv.com/'+link['href']]
 	end
 	#@news6=@news6.take(10)
+	doc10 = Nokogiri::HTML(open('http://sports.ndtv.com/'))
+	@news10=[]
+	
+	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
+	doc10.css('.topStoryContainer a').each do |link|
+	    	@news10<<  [link.text.strip,'http://sports.ndtv.com/'+link['href']]
+	end
+	#@news6=@news6.take(10)
 
+
+http://www.deccanchronicle.com/
 	
 end
 end
