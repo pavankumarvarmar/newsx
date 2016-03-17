@@ -99,7 +99,7 @@ def index
 	
 	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
 	doc10.css('.topStoryContainer a').each do |link|
-	    	@news10<<  [link.text.strip,'http://sports.ndtv.com/'+link['href']]
+	    	@news10<<  [link.text.strip,'http://www.deccanchronicle.com/'+link['href']]
 	end
 	#@news6=@news6.take(10)
 
