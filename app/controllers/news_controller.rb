@@ -35,7 +35,7 @@ def index
 	@news3=[]
 	
 	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
-	doc3.css('.h-main-lead a').each do |link|
+	doc3.css('.fltrt a').each do |link|
 	    	@news3 <<  [link.text.strip,link['href']]
 	end
 	#@news3=@news3.take(10)
