@@ -31,11 +31,11 @@ def index
 	end
 	#@news2=@news2.take(10)
 
-	doc3 = Nokogiri::HTML(open('http://tupaki.com'))
+	doc3 = Nokogiri::HTML(open('http://www.thehindu.com'))
 	@news3=[]
 	
 	#doc.xpath('//div[@id="verytaja"]/a').each do |link|
-	doc3.css('.titleheader li a').each do |link|
+	doc3.css('.h-main-lead a').each do |link|
 	    	@news3 <<  [link.text.strip,link['href']]
 	end
 	#@news3=@news3.take(10)
